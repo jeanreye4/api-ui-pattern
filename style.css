@@ -1,0 +1,68 @@
+html {
+  height: 80vh;
+  background-color: black;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  background-color: red;
+  color: white;
+  height: 5vh;
+  font-size: 35px;
+  position: relative;
+  width: 100vw;
+  
+}
+
+.Mario-logo {
+  display: flex;
+  width: 20vw;
+  height: 20vh;
+  align-items: center;
+  margin: 0 auto;
+}
+
+img {
+  height: 175px;
+  width: 1000px;
+  justify-content: center;
+}
+
+
+
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  transition: all 800ms ease;
+}
+
+
+.gallery-container {
+  overflow: hidden;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery__item {
+  list-style: none;
+  height: 400px;
+  min-width: 1000px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+footer {
+  font-size: 55px;
+  font-weight: 900;
+}
