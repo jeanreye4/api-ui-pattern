@@ -21,50 +21,60 @@ fetch(url)
 
       marioAlbum.insertAdjacentHTML("beforeend", htmlTemplate)
     }
+    
+    let videoHTML = `
+      <video width="400" controls>
+        <source src="./MARIO_GIF.mp4" type="video/mp4">
+      </video> 
+    `
+    
+    marioAlbum.insertAdjacentHTML("beforeend", videoHTML)
   })
 
 
-let currentSlide = 1;
-let slideWidth = 1000
+let currentSlide = 0;
+let slideWidth = 750
 let delta = slideWidth
 
-let transitionSlide = () => {
+let transitionSlidePlus = () => {
   let jsGallery = document.querySelector(".js-gallery")
   if (currentSlide < 15) {
-    jsGallery.style.transform = `translateX(-${delta}px)`
-    delta += slideWidth
     currentSlide++
+    jsGallery.style.transform = `translateX(-${delta * currentSlide}px)`
+    // delta += slideWidth
   }
   else {
     jsGallery.style.transform = `translateX(-${0})`
-    delta = slideWidth
+    // delta = slideWidth
     currentSlide = 1
   }
 }
 
-setInterval(transitionSlide, 3000)
+let transitionSlideMinus = () => {
+  let jsGallery = document.querySelector(".js-gallery")
+  if (currentSlide > 0) {
+    currentSlide--
+    jsGallery.style.transform = `translateX(-${delta * currentSlide}px)`
+    // delta += slideWidth
+  }
+  else {
+    jsGallery.style.transform = `translateX(-${0})`
+    // delta = slideWidth
+    currentSlide = 1
+  }
+}
+
+
+let nextButton = document.querySelector(".next")
+let backButton = document.querySelector(".back")
+
+nextButton.addEventListener("click", transitionSlidePlus)
+backButton.addEventListener("click", transitionSlideMinus)
+// setInterval(transitionSlide, 3000)
 
 
 {/* <h2>${mario.amiibo[i].amiiboSeries}</h2> */}
 // leftButton.addEventListener("click", moveLeft)
-// function moveLeft() {
-
-// }
-
-// rightButton.addEventListener("click", moveRight) 
-// function moveRight() {
-
-// }
-
-// let handleNext = () => {
-//     current++
-//     document.querySelector('img').src = array[current].image
-// }
-/*mario.forEach(mario) {
-let ul =document.querySelect(UL)
-li = document.createElement('li')
-*/
-
 
 
 

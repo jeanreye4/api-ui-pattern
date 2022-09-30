@@ -33,7 +33,10 @@ img {
   justify-content: center;
 }
 
-
+.slideContainer {
+  display: flex;
+  justify-content: center;
+}
 
 
 .gallery {
@@ -48,14 +51,14 @@ img {
 .gallery-container {
   overflow: hidden;
   position: relative;
-  width: 1000px;
+  width: 750px;
   margin: 0 auto;
 }
 
 .gallery__item {
   list-style: none;
   height: 400px;
-  min-width: 1000px;
+  min-width: 750px;
   background-size: 200px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -65,4 +68,10 @@ img {
 footer {
   font-size: 55px;
   font-weight: 900;
+  text-align: center;
+}
+
+video {
+  height: 400px;
+  min-width: 750px;
 }
