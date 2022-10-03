@@ -16,7 +16,7 @@ h1 {
   font-size: 35px;
   position: relative;
   width: 100vw;
-  
+  text-align: center;
 }
 
 .Mario-logo {
@@ -75,3 +75,8 @@ video {
   height: 400px;
   min-width: 750px;
 }
+
+button {
+  background-color: red;
+}
+

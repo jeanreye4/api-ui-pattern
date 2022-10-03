@@ -41,11 +41,9 @@ let transitionSlidePlus = () => {
   if (currentSlide < 15) {
     currentSlide++
     jsGallery.style.transform = `translateX(-${delta * currentSlide}px)`
-    // delta += slideWidth
   }
   else {
     jsGallery.style.transform = `translateX(-${0})`
-    // delta = slideWidth
     currentSlide = 1
   }
 }
@@ -55,11 +53,9 @@ let transitionSlideMinus = () => {
   if (currentSlide > 0) {
     currentSlide--
     jsGallery.style.transform = `translateX(-${delta * currentSlide}px)`
-    // delta += slideWidth
   }
   else {
     jsGallery.style.transform = `translateX(-${0})`
-    // delta = slideWidth
     currentSlide = 1
   }
 }
@@ -70,11 +66,9 @@ let backButton = document.querySelector(".back")
 
 nextButton.addEventListener("click", transitionSlidePlus)
 backButton.addEventListener("click", transitionSlideMinus)
-// setInterval(transitionSlide, 3000)
 
 
-{/* <h2>${mario.amiibo[i].amiiboSeries}</h2> */}
-// leftButton.addEventListener("click", moveLeft)
+
 
 
 
