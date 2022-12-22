@@ -66,9 +66,3 @@ let backButton = document.querySelector(".back")
 
 nextButton.addEventListener("click", transitionSlidePlus)
 backButton.addEventListener("click", transitionSlideMinus)
-
-
-
-
-
-
